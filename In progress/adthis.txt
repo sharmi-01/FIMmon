@@ -1,0 +1,4 @@
+read panna sollanum
+modify panna sollanum
+delete panna atha 
+entha admin del panna nu sollum

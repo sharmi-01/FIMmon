@@ -1,0 +1,26 @@
+    Logging and Alerts:
+    Instead of relying solely on visual feedback through Write-Host, you can implement a logging mechanism to record the monitoring results. You could log changes to a separate file, send email alerts, or even use a dedicated logging system like Windows Event Log. This way, you'll have a more comprehensive record of file changes and potential security incidents.
+
+    Timestamps:
+    Include timestamps in the log to indicate when each file's hash was last checked. This information helps track the timeline of file modifications and may be useful in incident investigation.
+
+    Handling Large Files and Directories:
+    For scalability and performance, consider implementing a mechanism to handle large files or directories. In some cases, hashing large files can be time-consuming, so you might want to provide progress indicators or divide the task into smaller chunks.
+
+    Recursive Monitoring:
+    If you have subdirectories within the "Files" folder, you could add an option to monitor files recursively, including those in the subdirectories.
+
+    File Exclusion:
+    Allow the user to specify files or file types to exclude from monitoring. Some files may change frequently, but their changes are expected and don't indicate a security issue. Excluding such files can reduce noise and focus monitoring efforts on critical files.
+
+    Enhanced Hashing Algorithms:
+    While SHA-512 is a strong hashing algorithm, you could provide options for other algorithms like SHA-256 or MD5, depending on your specific security needs.
+
+    Command-Line Arguments:
+    Instead of prompting the user to choose options, you can make the script more flexible by accepting command-line arguments. This way, the script can be automated and integrated into other systems or scripts.
+
+    Secure Storage of Baseline:
+    Consider securing the "baseline.txt" file and the script itself, especially if it contains sensitive information. Restrict access permissions to authorized users only.
+
+    Continuous Monitoring:
+    For real-time monitoring, you might want to consider running the script as a background process or using a scheduling mechanism (e.g., Task Scheduler on Windows) to check file integrity at regular intervals.
